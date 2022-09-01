@@ -62,3 +62,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# Laravel API Test
+## Pushing project to the GitHub for project control version
+1. git init
+2. git add .
+3. git commit -m "First commit on Laravel API first project"
+4. git branch -M main
+5. git remote add origin https://github.com/azlinliana/laravel-api-test.git
+6. git push -u origin main
