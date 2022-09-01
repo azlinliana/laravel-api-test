@@ -72,3 +72,17 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 4. git branch -M main
 5. git remote add origin https://github.com/azlinliana/laravel-api-test.git
 6. git push -u origin main
+
+
+## Installing Laravel Passport
+1. sail composer require laravel/passport
+2. sail artisan migrate
+3. sail artisan passport:install
+4. In App\Models\User add-> use Laravel\Passport\HasApiTokens; and remove use Laravel\Sanctum\HasApiTokens; if exist.
+5. In config>auth.php, add the following in 'guards'=> [], :
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
+        
+
