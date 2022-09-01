@@ -17,7 +17,8 @@ class AuthorFactory extends Factory
     public function definition()
     {
         return [
-            //
+            // List of attributes that want to be generated with the factory
+            'name' => $this->faker->name
         ];
     }
 }

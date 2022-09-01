@@ -14,6 +14,6 @@ class AuthorSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Author::factory(5)->create(); // This will create five random data in the database
     }
 }
