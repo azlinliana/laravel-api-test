@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreAuthorRequest;
 use App\Http\Requests\UpdateAuthorRequest;
 use App\Models\Author;
+use App\Http\Resources\AuthorsResource;
 
 class AuthorsController extends Controller
 {
@@ -34,9 +35,10 @@ class AuthorsController extends Controller
      * @param  \App\Http\Requests\StoreAuthorRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAuthorRequest $request)
+    public function store(Author $author)
     {
-        //
+        // Return author's object
+        return $author;
     }
 
     /**
@@ -47,7 +49,7 @@ class AuthorsController extends Controller
      */
     public function show(Author $author)
     {
-        //
+        return new AuthorsResource($author);
     }
 
     /**
