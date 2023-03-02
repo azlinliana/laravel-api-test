@@ -30,5 +30,9 @@ Route::middleware('auth:api')->prefix('v1')->group(function() {
     });
 
     // Create route for authors->End point: /author/{author}
-    Route::get('/authors/{author}', [AuthorsController::class, 'show']);
+    // Route::get('/authors/{author}', [AuthorsController::class, 'show']);
+
+    // CRUD Rest Api
+    Route::apiResource('/authors', AuthorsController::class); // Show all resources
+
 });

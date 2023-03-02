@@ -13,7 +13,10 @@ class UpdateAuthorRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true; 
+        // Change to true because cannot update the data
+        // Postman return "message": "This action is unauthorized."
+
     }
 
     /**
