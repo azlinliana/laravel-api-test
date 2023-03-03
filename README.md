@@ -86,3 +86,33 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         ],
         
 Resources: https://laravel.com/docs/9.x/passport#installation
+
+## Accessing MySQL at CLI
+sail mysql -u root -p;
+
+## Simple App - Bookstore
+
+1. sail artisan make:model Book -a
+
+-a stands for creating model, factory, migration, seeder, and controller
+
+2. Do migration for table books
+    Field:
+        -Name
+        -Description
+        -Publication Year
+    
+    sail artisan migrate
+
+3. Set up Pivot table
+    sail artisan make:migration create_book_author_table
+
+4. Create factories
+
+6. Make book resources
+    sail artisan make:resource BooksResource
+
+7. CRUD
+
+8. Manage Pivot table
+    -Update model, controller, and resource
