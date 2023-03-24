@@ -75,24 +75,40 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 ## Installing Laravel Passport
-1. sail composer require laravel/passport
-2. sail artisan migrate
-3. sail artisan passport::install
+1.
+```
+sail composer require laravel/passport
+```
+2. 
+```
+sail artisan migrate
+```
+3. 
+```
+sail artisan passport::install
+```
 4. In App\Models\User add-> use Laravel\Passport\HasApiTokens; and remove use Laravel\Sanctum\HasApiTokens; if exist.
 5. In config>auth.php, add the following in 'guards'=> [], :
+```
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
         ],
+ ```
         
 Resources: https://laravel.com/docs/9.x/passport#installation
 
 ## Accessing MySQL at CLI
+```
 sail mysql -u root -p;
+```
 
 ## Simple App - Bookstore
 
-1. sail artisan make:model Book -a
+1. 
+```
+sail artisan make:model Book -a
+```
 
 -a stands for creating model, factory, migration, seeder, and controller
 
@@ -101,18 +117,24 @@ sail mysql -u root -p;
         -Name
         -Description
         -Publication Year
-    
-    sail artisan migrate
 
 3. Set up Pivot table
+```
     sail artisan make:migration create_book_author_table
+```
 
 4. Create factories
 
 6. Make book resources
+```
     sail artisan make:resource BooksResource
+```
 
 7. CRUD
 
 8. Manage Pivot table
+<<<<<<< HEAD
     -Update model, controller, and resource 
+=======
+    -Update model, controller, and resource
+>>>>>>> 627f825c2afe7e2df87731c9d9cef6f638319cee
