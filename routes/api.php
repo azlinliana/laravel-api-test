@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorsController;
 use App\Http\Controllers\BooksController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,7 @@ use App\Http\Controllers\BooksController;
 |
 */
 
+// Simple Bookstore CRUD 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 }); //Default
@@ -37,3 +39,6 @@ Route::middleware('auth:api')->prefix('v1')->group(function() {
     Route::apiResource('/authors', AuthorsController::class); // Show all resources
     Route::apiResource('/books', BooksController::class);
 });
+
+// Simple Products CRUD
+

@@ -115,4 +115,4 @@ sail mysql -u root -p;
 7. CRUD
 
 8. Manage Pivot table
-    -Update model, controller, and resource
+    -Update model, controller, and resource 
